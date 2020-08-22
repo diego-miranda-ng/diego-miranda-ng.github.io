@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.897e2ae2.chunk.js",
-    "main.js.map": "/static/js/main.897e2ae2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f240f882.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f240f882.js.map",
-    "static/js/2.d2b92168.chunk.js": "/static/js/2.d2b92168.chunk.js",
-    "static/js/2.d2b92168.chunk.js.map": "/static/js/2.d2b92168.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6d36de46f67663c1b791b7ed23dfdbf8.js": "/precache-manifest.6d36de46f67663c1b791b7ed23dfdbf8.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.d2b92168.chunk.js.LICENSE.txt": "/static/js/2.d2b92168.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/TheAlfadur.github.io/static/css/main.5f361e03.chunk.css",
+    "main.js": "/TheAlfadur.github.io/static/js/main.d14064f0.chunk.js",
+    "main.js.map": "/TheAlfadur.github.io/static/js/main.d14064f0.chunk.js.map",
+    "runtime-main.js": "/TheAlfadur.github.io/static/js/runtime-main.dfdaf86d.js",
+    "runtime-main.js.map": "/TheAlfadur.github.io/static/js/runtime-main.dfdaf86d.js.map",
+    "static/js/2.d2b92168.chunk.js": "/TheAlfadur.github.io/static/js/2.d2b92168.chunk.js",
+    "static/js/2.d2b92168.chunk.js.map": "/TheAlfadur.github.io/static/js/2.d2b92168.chunk.js.map",
+    "index.html": "/TheAlfadur.github.io/index.html",
+    "precache-manifest.407efe0e160e734632877ccc29ee99d2.js": "/TheAlfadur.github.io/precache-manifest.407efe0e160e734632877ccc29ee99d2.js",
+    "service-worker.js": "/TheAlfadur.github.io/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/TheAlfadur.github.io/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.d2b92168.chunk.js.LICENSE.txt": "/TheAlfadur.github.io/static/js/2.d2b92168.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/TheAlfadur.github.io/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f240f882.js",
+    "static/js/runtime-main.dfdaf86d.js",
     "static/js/2.d2b92168.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.897e2ae2.chunk.js"
+    "static/js/main.d14064f0.chunk.js"
   ]
 }
