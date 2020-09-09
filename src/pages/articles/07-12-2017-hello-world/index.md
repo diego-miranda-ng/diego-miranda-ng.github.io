@@ -1,7 +1,7 @@
 ---
-path: "/hello-world"
-date: 2017-07-12T17:12:33.962Z
-title: "My First Gatsby Post"
+path: "/react-hooks-um-breve-resumo"
+date: 2020-08-24T03:00:00+0000
+title: "React Hooks — Um “Breve” Resumo"
 ---
 
 ![https://cdn-images-1.medium.com/max/1800/1*Ea-TTjr8AKGdsg1nnBsZWw.jpeg](https://cdn-images-1.medium.com/max/1800/1*Ea-TTjr8AKGdsg1nnBsZWw.jpeg)
