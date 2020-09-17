@@ -7,7 +7,7 @@ export default function Template({ data }) {
   const { mdx: post } = data
   return (
     <div className="blog-post-container">
-      <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
+      <Helmet title={`Alfa's - ${post.frontmatter.title}`} />
       <div className="blog-post">
         <h1>{post.frontmatter.title}</h1>
         <MDXRenderer>{post.body}</MDXRenderer>
