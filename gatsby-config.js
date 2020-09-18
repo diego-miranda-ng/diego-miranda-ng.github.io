@@ -58,7 +58,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-material-ui`,
+    
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // Add any options here
+      },
+    },
 
     {
       resolve: `gatsby-plugin-google-analytics`,
