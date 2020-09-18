@@ -5,14 +5,14 @@ module.exports = {
     author: `Diego Miranda Neves Gomes`,
   },
   plugins: [
-    // `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/images`,
-    //   },
-    // },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,9 +21,26 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
       },
     },
     `gatsby-plugin-catch-links`,
@@ -41,6 +58,15 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-material-ui`,
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-176437195-1",
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

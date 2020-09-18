@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges: posts } = data.allMdx
   return (
     <div className="blog-posts">
       {posts
@@ -25,7 +25,7 @@ export default function Index({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt(pruneLength: 250)
