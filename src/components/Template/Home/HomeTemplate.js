@@ -1,27 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Container from "@material-ui/core/Container"
 
 import Header from "../../Header/Header"
-import FeaturedCard from "../../Card/Featured/FeaturedCard"
+import MainFeaturedCard from "../../Card/MainFeatured/MainFeaturedCard"
 
 const HomeTemplate = ({ posts }) => {
   return (
     <>
-      <Header title="Alfa's Blog" />
-      <div className="blog-posts">
-        {posts
-          .filter(post => post.title.length > 0)
-          .map(post => {
-            return (
-              <FeaturedCard
-                title={post.title}
-                date={post.date}
-                description={post.description}
-                image={post.image}
-              />
-            )
-          })}
-      </div>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <Header title="Alfa's Blog" />
+        <main>
+          {posts
+            .filter(post => post.title.length > 0)
+            .map(post => {
+              return <MainFeaturedCard {...post} />
+            })}
+        </main>
+      </Container>
     </>
   )
 }

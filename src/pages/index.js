@@ -14,7 +14,8 @@ export default function Index({ data }) {
       (posts || []).map(({ node: post }) => ({
         title: post.frontmatter.title,
         date: post.frontmatter.date,
-        description: post.frontmatter.description,
+        description: post.excerpt,
+        path: post.frontmatter.path,
         image: post.frontmatter.image.childImageSharp.fluid.src,
       }))
     )
