@@ -1,15 +1,29 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import HomeTemplate from "../components/Template/Home/HomeTemplate"
 
 export default function Index({ data }) {
-  const { edges: posts } = data.allMdx
+  const [formattedPosts, setFormattedPosts] = useState([])
+
+  useEffect(() => {
+    const { edges: posts } = data.allMdx
+
+    setFormattedPosts(
+      (posts || []).map(({ node: post }) => ({
+        title: post.frontmatter.title,
+        date: post.frontmatter.date,
+        description: post.frontmatter.description,
+        image: post.frontmatter.image.childImageSharp.fluid.src,
+      }))
+    )
+  }, [data])
+
   return (
     <>
       <Helmet title={`Alfa's Blog`} />
-      <HomeTemplate posts={posts} />
+      <HomeTemplate posts={formattedPosts} />
     </>
   )
 }

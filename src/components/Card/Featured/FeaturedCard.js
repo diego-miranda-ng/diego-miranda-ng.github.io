@@ -21,9 +21,9 @@ const useStyles = makeStyles({
   },
 })
 
-export default function FeaturedPost(props) {
+export default function FeaturedCard(props) {
   const classes = useStyles()
-  const { post } = props
+  const { title, date, description, image } = props
 
   return (
     <Grid item xs={12} md={6}>
@@ -32,25 +32,21 @@ export default function FeaturedPost(props) {
           <div className={classes.cardDetails}>
             <CardContent>
               <Typography component="h2" variant="h5">
-                {post.title}
+                {title}
               </Typography>
               <Typography variant="subtitle1" color="textSecondary">
-                {post.date}
+                {date}
               </Typography>
               <Typography variant="subtitle1" paragraph>
-                {post.description}
+                {description}
               </Typography>
               <Typography variant="subtitle1" color="primary">
-                Continue reading...
+                Continue lendo...
               </Typography>
             </CardContent>
           </div>
           <Hidden xsDown>
-            <CardMedia
-              className={classes.cardMedia}
-              image={post.image}
-              title={post.imageTitle}
-            />
+            <CardMedia image={image} title={title} />
           </Hidden>
         </Card>
       </CardActionArea>
@@ -58,6 +54,9 @@ export default function FeaturedPost(props) {
   )
 }
 
-FeaturedPost.propTypes = {
-  post: PropTypes.object,
+FeaturedCard.propTypes = {
+  title: PropTypes.string,
+  date: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
 }
