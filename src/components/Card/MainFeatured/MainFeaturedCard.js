@@ -4,7 +4,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
-import Link from "@material-ui/core/Link"
+import Button from "@material-ui/core/Button"
+import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   mainFeaturedPost: {
@@ -61,8 +62,10 @@ const MainFeaturedCard = props => {
             <Typography variant="h5" color="inherit" paragraph>
               {description}
             </Typography>
-            <Link variant="subtitle1" href="#">
-              {path}
+            <Link to={path} style={{ textDecoration: "none" }}>
+              <Button variant="contained" color="primary">
+                Continue Lendo
+              </Button>
             </Link>
           </div>
         </Grid>
